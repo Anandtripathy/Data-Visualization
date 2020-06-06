@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0219.0753                               -->
+<workbook original-version='18.1' source-build='2020.1.0 (20201.20.0219.0753)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Stop Detail+ (MplsStops (2))' inline='true' name='federated.0b4u0p901d7pl31g5hc7c01jf82l' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='MplsStops (2)' name='excel-direct.1p2d6dx1ekc68j19mh9lc1id9x2e'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/aarti/Desktop/Data_Visualization/MplsStops (2).xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Stop Detail].[Id]' />
+              <expression op='[Stop Location].[Id]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.1p2d6dx1ekc68j19mh9lc1id9x2e' name='Stop Detail' table='[&apos;Stop Detail$&apos;]' type='table'>
+            <columns gridOrigin='A1:G10001:no:A1:G10001:0' header='yes' outcome='6'>
+              <column datatype='string' name='Id' ordinal='0' />
+              <column datatype='datetime' name='Date' ordinal='1' />
+              <column datatype='string' name='StopCategory' ordinal='2' />
+              <column datatype='string' name='PersonSearch' ordinal='3' />
+              <column datatype='string' name='VehicleSearch' ordinal='4' />
+              <column datatype='string' name='Gender' ordinal='5' />
+              <column datatype='string' name='Ticket/Arrest' ordinal='6' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1p2d6dx1ekc68j19mh9lc1id9x2e' name='Stop Location' table='[&apos;Stop Location$&apos;]' type='table'>
+            <columns gridOrigin='A1:E10001:no:A1:E10001:0' header='yes' outcome='6'>
+              <column datatype='string' name='Id' ordinal='0' />
+              <column datatype='real' name='Latitude' ordinal='1' />
+              <column datatype='real' name='Longitude' ordinal='2' />
+              <column datatype='integer' name='PolicePrecinct' ordinal='3' />
+              <column datatype='string' name='Neighborhood' ordinal='4' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Date]' value='[Stop Detail].[Date]' />
+          <map key='[Gender]' value='[Stop Detail].[Gender]' />
+          <map key='[Id (Stop Location)]' value='[Stop Location].[Id]' />
+          <map key='[Id]' value='[Stop Detail].[Id]' />
+          <map key='[Latitude]' value='[Stop Location].[Latitude]' />
+          <map key='[Longitude]' value='[Stop Location].[Longitude]' />
+          <map key='[Neighborhood]' value='[Stop Location].[Neighborhood]' />
+          <map key='[PersonSearch]' value='[Stop Detail].[PersonSearch]' />
+          <map key='[PolicePrecinct]' value='[Stop Location].[PolicePrecinct]' />
+          <map key='[StopCategory]' value='[Stop Detail].[StopCategory]' />
+          <map key='[Ticket/Arrest]' value='[Stop Detail].[Ticket/Arrest]' />
+          <map key='[VehicleSearch]' value='[Stop Detail].[VehicleSearch]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Id]</local-name>
+            <parent-name>[Stop Detail]</parent-name>
+            <remote-alias>Id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Stop Detail]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StopCategory</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[StopCategory]</local-name>
+            <parent-name>[Stop Detail]</parent-name>
+            <remote-alias>StopCategory</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PersonSearch</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PersonSearch]</local-name>
+            <parent-name>[Stop Detail]</parent-name>
+            <remote-alias>PersonSearch</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VehicleSearch</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[VehicleSearch]</local-name>
+            <parent-name>[Stop Detail]</parent-name>
+            <remote-alias>VehicleSearch</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Stop Detail]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ticket/Arrest</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Ticket/Arrest]</local-name>
+            <parent-name>[Stop Detail]</parent-name>
+            <remote-alias>Ticket/Arrest</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Stop Detail]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G10001:no:A1:G10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Id (Stop Location)]</local-name>
+            <parent-name>[Stop Location]</parent-name>
+            <remote-alias>Id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[Stop Location]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Stop Location]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PolicePrecinct</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PolicePrecinct]</local-name>
+            <parent-name>[Stop Location]</parent-name>
+            <remote-alias>PolicePrecinct</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Neighborhood</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Neighborhood]</local-name>
+            <parent-name>[Stop Location]</parent-name>
+            <remote-alias>Neighborhood</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Stop Location]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E10001:no:A1:E10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Person Search' datatype='string' name='[PersonSearch]' role='dimension' type='nominal' />
+      <column caption='Police Precinct' datatype='integer' name='[PolicePrecinct]' role='measure' type='quantitative' />
+      <column caption='Stop Category' datatype='string' name='[StopCategory]' role='dimension' type='nominal' />
+      <column caption='Vehicle Search' datatype='string' name='[VehicleSearch]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.641762' measure-ordering='alphabetic' measure-percentage='0.358238' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#59a14f' fontname='Times New Roman' italic='true'>Police Precinct Vs Stop Location</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Stop Detail+ (MplsStops (2))' name='federated.0b4u0p901d7pl31g5hc7c01jf82l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0b4u0p901d7pl31g5hc7c01jf82l'>
+            <column datatype='string' name='[Id (Stop Location)]' role='dimension' type='nominal' />
+            <column caption='Police Precinct' datatype='integer' name='[PolicePrecinct]' role='measure' type='quantitative' />
+            <column-instance column='[Id (Stop Location)]' derivation='CountD' name='[ctd:Id (Stop Location):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PolicePrecinct]' derivation='None' name='[none:PolicePrecinct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PolicePrecinct]' derivation='Sum' name='[sum:PolicePrecinct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0b4u0p901d7pl31g5hc7c01jf82l].[none:PolicePrecinct:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>5</max>
+          </filter>
+          <slices>
+            <column>[federated.0b4u0p901d7pl31g5hc7c01jf82l].[none:PolicePrecinct:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0b4u0p901d7pl31g5hc7c01jf82l].[sum:PolicePrecinct:qk]' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.0b4u0p901d7pl31g5hc7c01jf82l].[sum:PolicePrecinct:qk]' />
+              <lod column='[federated.0b4u0p901d7pl31g5hc7c01jf82l].[sum:PolicePrecinct:qk]' />
+              <lod column='[federated.0b4u0p901d7pl31g5hc7c01jf82l].[sum:PolicePrecinct:qk]' />
+              <color column='[federated.0b4u0p901d7pl31g5hc7c01jf82l].[sum:PolicePrecinct:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='10.904887199401855' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0b4u0p901d7pl31g5hc7c01jf82l].[ctd:Id (Stop Location):qk]</rows>
+        <cols>[federated.0b4u0p901d7pl31g5hc7c01jf82l].[none:PolicePrecinct:qk]</cols>
+      </table>
+      <simple-id uuid='{E429911A-0E9E-4C80-8772-FA7DB5B7FB98}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0b4u0p901d7pl31g5hc7c01jf82l].[none:PolicePrecinct:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0b4u0p901d7pl31g5hc7c01jf82l].[sum:PolicePrecinct:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0b4u0p901d7pl31g5hc7c01jf82l].[none:PolicePrecinct:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DC45A2E7-846F-4DC9-8309-D7E72215B15A}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      /LUnRAa5NgATExP8+Mc/BiAej/PGG2/w+uuvMzExwZtvvkkkEqG7u5vXXnuNkRFpCfO4cmUA
+      dF3n4sWLhEIhAAKBAF1dXeTn51NZWUl7ezuapjE9PU1HRwc1NTVZrlhkiisD0NfXx4ULFzhx
+      4gTz8/MYhkFhYSGBQIBEIoHH48E0Tfbt24fH4+HkyZPZLllkiKtPgs+ePUsgECAYDNLT04Oi
+      KOzYsYMPP/yQuro6amtruXbtGl//+tepr6/PdrlfICfB1nB1AACmpqaorq6+/60vo0DWc3IA
+      nLlV2kiO793N+V8fQmSQBEC4mgRAuJoEQLiaJQHQkzHGxsaJJVXi8QS6miCWtL4fphBWs2QU
+      aHbmNoaeYHB4lHyvF6++RFlDG8E8K5YuROZYEoCKmlqGrw1Rt76Ga2d7UEob2FiQl/Hu0FYz
+      TTPrncoeVqa6Q2eCrq/RV9YBLAnAwKULKMVVeEydinALPmOJO4sxKos/f7KkUyfCHpRLE2EZ
+      6w6dIU5dp5ZslXUNzSwsxwEfjY11+L0Q16xYshCZZUkAissqKS774s9Czv/CF0KGQYW7SQCE
+      q0kAhKtJAISrSQCEq0kAhKtJAISrSQCEq0kAhKtJAISrSQCEq0kAhKtJAISrSQCEq0kAhKtJ
+      AISrSQCEq0kAhKtJAISrSQCEq0kAhKtZEoDE0gw9p8+xFEswO7tAPDLH7FLMikULkVGWNC8Z
+      ujFGZ0cDwyPjBBSFZGyBTVu2WbFoITLKgj2AidcXIBgqQtGSzIwPE9ED5Hnl6Eo4nwVbqYei
+      PIPuT04SLK+gurGNDZV+JmYWH33RQmSY6x+S96Bc6g0qD8mzRka3yge7Q+eCe92hNc35jU0N
+      w8iZbtZOXqcZDYDX6/38jXJkD6Drek7Umkvt0cG5n78t+89c+ZAgd2rNlTrB2bXacg4ghFPZ
+      dAZloqlJkqqGY9Nmmmiaim44tsL7TNMkEY+has4/tzJ0jVgs5tj1aksA9GScc2d66Dl9hmjS
+      mSdthhqnv/8cN8acP3wbX7jN5St99Jy/nO1S0pqdGuPqlV4uDtzMdimrsiUAqhqjKtxKS1MN
+      seWEHW/5O1PygrS0bMCZg3VflF9SRfP6KmqqK7NdSlolZeWoiTjFRYXZLmVVtgTAp/hYXJhl
+      fm4ef8CZm5hpGiSTSZLJJIbDT4vis+NMRb3U11Y695Dyt2IJna1b21m6M5PtUlZlTwCCRdSW
+      BgiUhil26LOT9GSckeFpFheniOvOPEy7x1TyiM3d4tr1cccHwFRjDN64RXPrhmyXsioZBRKu
+      5vx5dCEySAIgXE0CIFxNAiAewsokoapqPHjKeO+CvDX/lmmgqiq6gwcVJADiIST413/4e37x
+      1r9x+sb8/Z8e/8173JycZGRs9SHO5euf8revHeHfX/8JkTUmrdWlaa5PLqzyJwv0nLhqQe2p
+      OXNMUjhOYWkVm5vX0X/9Km+eGsPIX0d9McSX7nDnrsLZj9+jpHkr5nQ/l2/O853v/xmVwPqm
+      Vgpn+ukfPk58Psj45XOML3r52v5mhiaW6dpYwrBaRvcv3yURTXDouS7OnR2kfn2IDz+4Sm1L
+      Aw2VmZtEkz2AeChqIopRsZVd5QYNnXsx43MAmLpKIjZL3FPNkzs2cm3kLvuf2EPIv7JpRRbn
+      +b1vPEtddTX726sYXTQ50LWNycnbPHHoacqDEE+qhMoa2FpXxs1bt2jbfZC9e3exua2TcHlB
+      Rn8vmQcQD0Fn5OYEjU0NYKicPfkpheF2SvOSBIIhonEv6vwNxpYDtFV6OT8wyd4DT1KgzTGV
+      LKS+PERMXSTfX8SNK+cYvqPzRFcLp3su0N7RguorQI+phMwEBbWV9J46SVXLTiKjFynbtCej
+      IZAACFeTQyDhav8HwJfr/y5o6jUAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
